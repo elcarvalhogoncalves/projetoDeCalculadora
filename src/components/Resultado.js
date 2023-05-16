@@ -24,14 +24,15 @@ function Resultado({theme,erro,inicio,conta,resultado}){
             conteudo = conteudo.replace(/ /g, '');
             const qntDeChar = conteudo.length;
             setclasseStyle2(qntDeChar)
+            console.log(classeStyle2)
         }
         document.addEventListener('click', () => {
             verificarQuantidadeCaracteres()
-            console.log(classeStyle2)
+            
         });
         document.addEventListener('touchstart', () => {
             verificarQuantidadeCaracteres()
-            console.log(classeStyle2)
+            
         });
       });
 
