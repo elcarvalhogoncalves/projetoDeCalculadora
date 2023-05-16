@@ -1,0 +1,66 @@
+.item {
+    display: flex;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    font-size: 18px;
+    color: #A3ADAD;
+    align-items: center;
+    border-radius: 45%;
+    background-color: #35363A;
+    box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.style_resetar {
+    width: 100%;
+    font-size: 24px;
+    border-radius: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #feb82b;
+    box-shadow: rgba(46, 32, 4, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1px;
+}
+
+.style_igualar {
+    width: 100%;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 32px;
+    color: #fff;
+    background-color: #9229e4;
+    box-shadow: rgba(34, 5, 55, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1px;
+}
+.style_mode{
+    width: 100%;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 32px;
+    color: #6B7176;
+    background-color: #F5F4F7;
+    box-shadow: rgba(69, 69, 69, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1px;
+}
+
+.lilas {
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    background-color: #47325B;
+    box-shadow: rgba(34, 5, 55, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1px;
+}
+
+.o img{
+    width: 20px;
+    opacity: 0.5; 
+}
+
+.r img{
+    width: 20px;
+    opacity: 0.7; 
+}
+
+.mode img{
+    width: 30px;
+}

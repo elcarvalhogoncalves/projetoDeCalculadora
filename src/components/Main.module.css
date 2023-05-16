@@ -1,0 +1,15 @@
+body {
+    display         : flex;
+    height          : 100vh;
+    justify-content : center;
+    align-items     : center;
+    background:  linear-gradient( 150deg, #FEFEFE, #a8acac );
+  }
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}

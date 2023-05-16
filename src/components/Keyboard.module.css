@@ -1,0 +1,87 @@
+.grid_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+    "a a r b"
+    "c d e f"
+    "g h i j"
+    "k l m n"
+    "o p q q";
+
+    padding: 0px 14px 0px 14px;
+    grid-gap: 5px;
+    justify-items: center;
+    align-items: center;
+}
+
+.resetar{
+    grid-area: a;
+}
+.igualar{
+    grid-area: q;
+}
+.b{
+    grid-area: b;
+}
+.c{
+    grid-area: c;
+}
+.d{
+    grid-area: d;
+}
+.e{
+    grid-area: e;
+}
+.f{
+    grid-area: f;
+}
+.g{
+    grid-area: g;
+}
+.h{
+    grid-area: h;
+}
+.i{
+    grid-area: i;
+}
+.j{
+    grid-area: j;
+}
+.k{
+    grid-area: k;
+}
+.l{
+    grid-area: l;
+}
+.m{
+    grid-area: m;
+}
+.n{
+    grid-area: n;
+}
+.o{
+    grid-area: o;
+}
+.p{
+    grid-area: p;
+}
+.mode{
+    grid-area: r;
+}
+
+.o img{
+    width: 20px;
+    opacity: 0.5; 
+}
+
+.r img{
+    width: 20px;
+    opacity: 0.7; 
+}
+
+.mode img{
+    width: 30px;
+}
+
+ /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;*/

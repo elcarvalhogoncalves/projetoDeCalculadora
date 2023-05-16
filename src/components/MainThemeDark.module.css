@@ -1,0 +1,14 @@
+.theme{
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 375px;
+    background:  linear-gradient(#4A4E4F, #111416 );
+    border-radius: 15px;
+    border: 1px solid #121517 ;
+    box-shadow: rgba(0, 0, 0, 0.35) 13px 10px 25px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
