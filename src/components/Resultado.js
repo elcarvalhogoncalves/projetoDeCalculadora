@@ -22,8 +22,9 @@ function Resultado({theme,erro,inicio,conta,resultado}){
                 espaços = 1;
             }
             conteudo = conteudo.replace(/ /g, '');
-            const qntDeChar = conteudo.length;
+            const qntDeChar = conteudo.length+espaços;
             setclasseStyle2(qntDeChar)
+            console.log(qntDeChar)
         }
         
         document.addEventListener('touchstart', verificarQuantidadeCaracteres);
