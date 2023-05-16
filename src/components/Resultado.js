@@ -14,6 +14,7 @@ function Resultado({theme,erro,inicio,conta,resultado}){
 
     document.addEventListener('DOMContentLoaded',() => {
         const elementoDaResposta = document.querySelector('article');
+        console.log(classeStyle2);
         function verificarQuantidadeCaracteres(){
             let conteudo = elementoDaResposta.textContent;
             let espaços = conteudo.split(" ");
@@ -24,8 +25,6 @@ function Resultado({theme,erro,inicio,conta,resultado}){
             conteudo = conteudo.replace(/ /g, '');
             const qntDeChar = conteudo.length;
             setclasseStyle2(qntDeChar)
-            console.log(classeStyle2)
-            return
         }
 
         document.addEventListener('click touchstart', verificarQuantidadeCaracteres());
