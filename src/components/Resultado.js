@@ -25,7 +25,7 @@ function Resultado({theme,erro,inicio,conta,resultado}){
             const qntDeChar = conteudo.length;
             setclasseStyle2(qntDeChar)
         }
-        document.addEventListener('click touchstart', verificarQuantidadeCaracteres);
+        document.addEventListener('click', verificarQuantidadeCaracteres);
       });
 
     function condP(inicio){
