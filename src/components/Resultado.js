@@ -22,7 +22,7 @@ function Resultado({theme,erro,inicio,conta,resultado}){
                 espaços = 1;
             }
             conteudo = conteudo.replace(/ /g, '');
-            const qntDeChar = conteudo.length+espaços;
+            const qntDeChar = conteudo.length;
             setclasseStyle2(qntDeChar)
             console.log(qntDeChar)
         }
