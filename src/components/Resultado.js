@@ -9,7 +9,7 @@ function Resultado({theme,erro,inicio,conta,resultado}){
     
     const [classeStyle, setclassStyle] = useState(styleLight.resultado);
 
-    const [classeStyle2, setclasseStyle2] = useState(styleDark.resultado);
+    const [classeStyle2, setclasseStyle2] = useState(0);
 
 
     document.addEventListener('DOMContentLoaded',() => {
@@ -23,13 +23,7 @@ function Resultado({theme,erro,inicio,conta,resultado}){
             }
             conteudo = conteudo.replace(/ /g, '');
             const qntDeChar = conteudo.length;
-            if(qntDeChar+espaços > 8){
-                setclassStyle(styleLight.resultadoMenor)
-                setclasseStyle2(styleDark.resultadoMenor)
-            } else {
-                setclassStyle(styleLight.resultado)
-                setclasseStyle2(styleDark.resultado)
-            }
+            setclasseStyle2(qntDeChar)
         }
         document.addEventListener('click', verificarQuantidadeCaracteres);
       });
@@ -61,11 +55,10 @@ function Resultado({theme,erro,inicio,conta,resultado}){
           }
     }
 
-    console.log(classeStyle)
     return(
         <div className={styleDark.resultadoAll}>
             <section className={theme === 0 ? (erro>= 1 ? styleLight.error : styleLight.hid) : (erro>= 1 ? styleDark.error : styleDark.hid) }>{condError(erro)}</section>
-            <section className={theme === 0 ? classeStyle : classeStyle2} >
+            <section className={theme === 0 ? (classeStyle2 > 8 ?  styleLight.resultadoMenor : styleLight.resultado) : (classeStyle2 > 8 ?  styleDark.resultadoMenor : styleDark.resultado) } >
                 <h1>{conta}</h1> 
                 <article>{condP(inicio)}{resultado}</article>
             </section>
