@@ -24,9 +24,8 @@ function Resultado({theme,erro,inicio,conta,resultado}){
             conteudo = conteudo.replace(/ /g, '');
             const qntDeChar = conteudo.length;
             setclasseStyle2(qntDeChar)
-            console.log(qntDeChar)
         }
-        
+        document.addEventListener('click', verificarQuantidadeCaracteres);
         document.addEventListener('touchstart', verificarQuantidadeCaracteres);
       });
 
