@@ -28,10 +28,7 @@ function Resultado({theme,erro,inicio,conta,resultado}){
             return
         }
 
-        document.addEventListener('click touchstart', () => {
-            verificarQuantidadeCaracteres()
-            
-        });
+        document.addEventListener('click touchstart', verificarQuantidadeCaracteres());
       });
 
     function condP(inicio){
