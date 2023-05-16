@@ -14,7 +14,6 @@ function Resultado({theme,erro,inicio,conta,resultado}){
 
     document.addEventListener('DOMContentLoaded',() => {
         const elementoDaResposta = document.querySelector('article');
-        
         function verificarQuantidadeCaracteres(){
             let conteudo = elementoDaResposta.textContent;
             let espaços = conteudo.split(" ");
@@ -26,8 +25,7 @@ function Resultado({theme,erro,inicio,conta,resultado}){
             const qntDeChar = conteudo.length;
             setclasseStyle2(qntDeChar)
         }
-
-        document.addEventListener('click', verificarQuantidadeCaracteres);
+        document.addEventListener('click touchstart', verificarQuantidadeCaracteres);
       });
 
     function condP(inicio){
@@ -57,6 +55,7 @@ function Resultado({theme,erro,inicio,conta,resultado}){
           }
     }
 
+    console.log(classeStyle2)
     return(
         <div className={styleDark.resultadoAll}>
             <section className={theme === 0 ? (erro>= 1 ? styleLight.error : styleLight.hid) : (erro>= 1 ? styleDark.error : styleDark.hid) }>{condError(erro)}</section>
