@@ -22,7 +22,7 @@ function Keyboard(props){
 
     return(
         <div className={styles.keyboard}>
-            <div><button onClick={pressKey} value={`${props.theme === 0 ? "MOON" : "SUN"}`} className={`${(tema(props.theme)).style_mode} ${props.theme === 0 ? (styleLight.style_mode_align_start) : (styleDark.style_mode_align_end)}`}></button></div>
+            <div className={styles.toggle} ><button onClick={pressKey} value={`${props.theme === 0 ? "MOON" : "SUN"}`} className={`${(tema(props.theme)).style_mode} ${props.theme === 0 ? (styleLight.style_mode_align_start) : (styleDark.style_mode_align_end)}`}></button><p>switch to {props.theme === 0 ? "dark" : "light"} theme</p></div>
             <div className={styles.grid_container}>           
                 <button onClick={pressKey} value="RESET" className={`${(tema(props.theme)).item} ${styles.resetar} ${(tema(props.theme)).style_resetar}`}>C</button>
                 <button onClick={pressKey} value="MULTIPLICADOR" className={`${(tema(props.theme)).item} ${styles.b} ${(tema(props.theme)).lilas}`}>×</button>
