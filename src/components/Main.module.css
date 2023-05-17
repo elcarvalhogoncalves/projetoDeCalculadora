@@ -4,6 +4,7 @@ body {
     justify-content : center;
     align-items     : center;
     background:  linear-gradient( 150deg, #FEFEFE, #a8acac );
+    background-size: cover
   }
 
 main{

@@ -9,9 +9,7 @@
     color: #4F5A5D;
     font-weight: 600;
     overflow: hidden;
-    padding-right: 7px;
-    padding-bottom: 5px;
-    
+    padding-right: 5px;
 }
 
 .resultado > :first-child {
@@ -27,7 +25,6 @@
     flex-direction: column;
     justify-content: end;
     align-items: start;
-    padding-bottom: 10px;
     color: #4F5A5D;
     font-weight: 600;
     overflow: hidden;

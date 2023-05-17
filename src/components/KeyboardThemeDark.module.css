@@ -8,10 +8,9 @@
     align-items: center;
     border-radius: 45%;
     background-color: #35363A;
-    box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1px;
+    box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1.5px;
     text-align: center;
     cursor: pointer;
-    
 }
 
 .style_resetar {
@@ -21,34 +20,70 @@
     font-weight: bold;
     color: #fff;
     background-color: #feb82b;
-    box-shadow: rgba(46, 32, 4, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1px;
+    box-shadow: rgba(46, 32, 4, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1.5px;
 }
 
 .style_igualar {
-    width: 100%;
+    height: 100%;
     border-radius: 18px;
     font-weight: bold;
     font-size: 32px;
     color: #fff;
     background-color: #9229e4;
-    box-shadow: rgba(34, 5, 55, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1px;
+    box-shadow: rgba(34, 5, 55, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1.5px;
 }
 .style_mode{
-    width: 100%;
-    border-radius: 18px;
+    padding: 2px;
+    margin-bottom: 15px;
+    width: 36px;
+    height: 20px;
+    border-radius: 20px;
     font-weight: bold;
     font-size: 32px;
-    color: #6B7176;
-    background-color: #F5F4F7;
-    box-shadow: rgba(69, 69, 69, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1px;
+    color: #A5ADAC;
+    background-color: #3B4043;
+    box-shadow: rgb(0, 0, 0, 0.35) 1.5px 1.5px 3px, rgba(255, 255, 255, 0.4) -1px -1px 1px;
 }
+
+.style_mode::after{
+    content: "";
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: #F3F5F7;
+    border: #ffffff solid 1px;
+    box-shadow: rgba(69, 69, 69, 0.25) 2px 1px 2px;
+    color: #fff;
+    cursor: pointer;
+    transform: translate(100%);
+    transition: 0.1s linear;
+
+}
+
+.style_mode_align_end{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    transition: 0.25s;
+}
+
+
+
 
 .lilas {
     width: 100%;
     font-weight: bold;
     color: #fff;
     background-color: #47325B;
-    box-shadow: rgba(34, 5, 55, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1px;
+    box-shadow: rgba(34, 5, 55, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1.5px;
+}
+
+.laranja {
+    width: 100%;
+    font-weight: bold;
+    color: #FDB92B;
+    background-color: #80612f59;
+    box-shadow: rgba(8, 8, 8, 0.35) 2px 2px 4px, rgba(255, 255, 255, 0.35) -1px -1px 1.5px;
 }
 
 .o img{

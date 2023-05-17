@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 240px;
-    height: 375px;
+    height: 420px;
     background:  linear-gradient(#4A4E4F, #111416 );
     border-radius: 15px;
     border: 1px solid #121517 ;
@@ -11,4 +11,7 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+

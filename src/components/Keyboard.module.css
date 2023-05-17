@@ -1,18 +1,23 @@
+
 .grid_container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
-    "a a r b"
+    "a t u b"
     "c d e f"
     "g h i j"
     "k l m n"
-    "o p q q";
-
-    padding: 0px 14px 0px 14px;
+    "s p o q";
     grid-gap: 5px;
     justify-items: center;
     align-items: center;
+}
+
+.keyboard{
+    padding-inline: 15px;
+    padding-bottom: 15px;
+    padding-top: 5px;
 }
 
 .resetar{
@@ -66,8 +71,24 @@
 .p{
     grid-area: p;
 }
+
+.v{
+    grid-area: v;
+}
+
+.t{
+    grid-area: t;
+}
+
+.u{
+    grid-area: u;
+}
+
 .mode{
     grid-area: r;
+}
+.dot{
+    grid-area: s;
 }
 
 .o img{

@@ -9,6 +9,7 @@ function Resultado({theme,erro,inicio,conta,resultado}){
     const [characteres, setCharacteres] = useState(0);
     const propRef = useRef(resultado);
 
+// MANEIRA UTILIZADA PARA ALTERAR A VISUALIZAÇÃO DAS INFORMAÇÕES QUANDO ULTRAPASSAREM UM CERTO NÚMERO DE DIGITOS
     useEffect(() => {
         if (propRef.current !== resultado) {
 
@@ -24,8 +25,9 @@ function Resultado({theme,erro,inicio,conta,resultado}){
             propRef.current = resultado;
         }
       }, [resultado]);
+//////////////////////////////////////////////////////////////////
 
-
+// FUNÇÃO PARA CONTROLAR O '=' ////////////////////////////////////
     function condP(inicio){
         if (inicio === 0) {
             return <p></p>;
@@ -33,7 +35,9 @@ function Resultado({theme,erro,inicio,conta,resultado}){
             return <p>=</p>;
           }  
     }
+//////////////////////////////////////////////////////////////////
 
+// FUNÃO PARA APLICAR MENSAGEM DE ERRO ////////////////////////
     function condError(erro){
         switch (erro) {
             case 1:
@@ -43,7 +47,7 @@ function Resultado({theme,erro,inicio,conta,resultado}){
                 return "ERROR NA CALCULADORA, OPERADOR INVALIDO";
 
             case 3:
-                return "CALCULADORA DE APENAS DOIS NÚMEROS";
+                return "EXPRESSÃO MAL FORMADA";
 
             case 4:
                 return "ERROR NA CALCULADORA, OPERADOR INVALIDO";
@@ -52,7 +56,7 @@ function Resultado({theme,erro,inicio,conta,resultado}){
                 return
           }
     }
-
+////////////////////////////////////////////////////////////
     return(
         <div className={styleDark.resultadoAll}>
             <section className={theme === 0 ? (erro>= 1 ? styleLight.error : styleLight.hid) : (erro>= 1 ? styleDark.error : styleDark.hid) }>{condError(erro)}</section>
