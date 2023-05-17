@@ -1,4 +1,4 @@
-import { useState, useEffect  } from "react";
+import { useState, useEffect, useRef  } from "react";
 import styleDark from "./ResultadoDark.module.css";
 import styleLight from "./ResultadoLight.module.css";
 
@@ -6,37 +6,34 @@ import styleLight from "./ResultadoLight.module.css";
 
 function Resultado({theme,erro,inicio,conta,resultado}){
 
-    
-    const [classeStyle, setclassStyle] = useState(styleLight.resultado);
+    const [characteres, setCharacteres] = useState(0);
+    const propRef = useRef(resultado);
 
-    const [classeStyle2, setclasseStyle2] = useState(0);
+    useEffect(() => {
+        if (propRef.current !== resultado) {
 
-
-    document.addEventListener('DOMContentLoaded',() => {
-        const elementoDaResposta = document.querySelector('article');
-        function verificarQuantidadeCaracteres(){
-            let conteudo = elementoDaResposta.textContent;
-            let espaços = conteudo.split(" ");
-            espaços = espaços.length -1;
-            if(espaços !== 0){
-                espaços = 1;
+            let resultadoLength = resultado;
+            let espacos = resultadoLength.split(" ");
+            if(espacos.length !== 1){
+                resultadoLength = resultadoLength.length;
+            } 
+            else{
+                resultadoLength = resultadoLength.length + 1;
             }
-            conteudo = conteudo.replace(/ /g, '');
-            const qntDeChar = conteudo.length;
-            setclasseStyle2(qntDeChar)
+            setCharacteres(resultadoLength);
+            propRef.current = resultado;
         }
-        elementoDaResposta.addEventListener('DOMSubtreeModified', verificarQuantidadeCaracteres);
-        // document.addEventListener('click', verificarQuantidadeCaracteres);
-      });
+      }, [resultado]);
+
 
     function condP(inicio){
         if (inicio === 0) {
             return <p></p>;
           } else {
             return <p>=</p>;
-          }
-          
+          }  
     }
+
     function condError(erro){
         switch (erro) {
             case 1:
@@ -56,11 +53,10 @@ function Resultado({theme,erro,inicio,conta,resultado}){
           }
     }
 
-    console.log(classeStyle2)
     return(
         <div className={styleDark.resultadoAll}>
             <section className={theme === 0 ? (erro>= 1 ? styleLight.error : styleLight.hid) : (erro>= 1 ? styleDark.error : styleDark.hid) }>{condError(erro)}</section>
-            <section className={theme === 0 ? (classeStyle2 > 8 ?  styleLight.resultadoMenor : styleLight.resultado) : (classeStyle2 > 8 ?  styleDark.resultadoMenor : styleDark.resultado) } >
+            <section className={theme === 0 ? (characteres > 8 ?  styleLight.resultadoMenor : styleLight.resultado) : (characteres > 8 ?  styleDark.resultadoMenor : styleDark.resultado) } >
                 <h1>{conta}</h1> 
                 <article>{condP(inicio)}{resultado}</article>
             </section>
@@ -68,14 +64,4 @@ function Resultado({theme,erro,inicio,conta,resultado}){
     )
 }
 
-// Resultado.propTypes = {
-//     conta: PropTypes.string.isRequired,
-//     resultado: PropTypes.number,
-
-// }
-
-// Resultado.defaultProps = {
-//     conta: "",
-//     resultado: 0,
-// }
 export default Resultado

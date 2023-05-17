@@ -15,8 +15,6 @@ import SunBlack from '../images/sun.svg';
 
 
 function Keyboard(props){
-    // const [classeStyleItem, setclassStyleItem] = useState((props.theme === 0 ? styleLight:styleDark));
-    // props.theme === 0 ? styleLight.item : styleDark.item
     function pressKey(e){
         props.evento(e.target.attributes.getNamedItem('value').value)
     }
@@ -26,10 +24,6 @@ function Keyboard(props){
         return tema
     }   
 
-    // useEffect(() => {
-    //     props.theme === 0 ? setclassStyleItem(styleLight) : setclassStyleItem(styleDark)
-    //   }, [props.theme]);
-
 
     return(
         <div className={styles.keyboard}>
@@ -37,8 +31,6 @@ function Keyboard(props){
             <div className={styles.grid_container}>           
                 <button onClick={pressKey} value="RESET" className={`${(tema(props.theme)).item} ${styles.resetar} ${(tema(props.theme)).style_resetar}`}>C</button>
                 <button onClick={pressKey} value={`${props.theme === 0 ? "MOON" : "SUN"}`} className={`${(tema(props.theme)).item} ${styles.r} ${(tema(props.theme)).style_mode}`}><img src={props.theme === 0 ? modeMoonWhite : modeSunBlack} value={`${props.theme === 0 ? "MOON" : "SUN"}`} /></button>
-                {/* {<div className={`${styles.item} ${styles.b}`}>SE</div>} */}
-                {/* <div className={`${styles.item} ${styles.b}`}>TAR</div> */}
                 <button onClick={pressKey} value="MULTIPLICADOR" className={`${(tema(props.theme)).item} ${styles.b} ${(tema(props.theme)).lilas}`}>×</button>
                 <button onClick={pressKey} value="7" className={`${(tema(props.theme)).item} ${styles.c}`}>7</button>
                 <button onClick={pressKey} value="8" className={`${(tema(props.theme)).item} ${styles.d}`}>8</button>
@@ -55,7 +47,6 @@ function Keyboard(props){
                 <button onClick={pressKey} value="DEL" className={`${(tema(props.theme)).item} ${styles.o}`}><img src={props.theme === 0 ? BackSpaceBlack : BackSpaceWhite} value="DEL" /></button>
                 <button onClick={pressKey} value="0" className={`${(tema(props.theme)).item} ${styles.p}`}>0</button>
                 <button onClick={pressKey} value="IGUALAR" className={`${(tema(props.theme)).item} classeStyleItem ${styles.igualar} ${(tema(props.theme)).style_igualar}`}>=</button>
-                {/* <div className={styles.item}>LAR</div> */}
             </div>
         </div>
     )
