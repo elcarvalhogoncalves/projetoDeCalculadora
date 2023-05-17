@@ -55,14 +55,14 @@
     box-shadow: rgba(69, 69, 69, 0.25) 2px 1px 2px;
     color: #fff;
     cursor: pointer;
-    transition: 0.1s linear;
+    transition: 0.09s linear;
 }
 
 .style_mode_align_start{
     display: flex;
     justify-content: start;
     align-items: center;
-    transition: 0.25s;
+    transition: 0.20s;
 }
 
 
